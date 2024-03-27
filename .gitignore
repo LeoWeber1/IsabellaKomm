@@ -4,7 +4,3 @@ img_ue/
 *
 images/
 */
-.gitignore
-*
-!/.gitignore
-/images/

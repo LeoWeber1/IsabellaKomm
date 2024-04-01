@@ -499,20 +499,23 @@
                </div>
           </div>
      </section>
-
      <script>
           function sendEmail() {
-          var name = document.getElementById('name').value;
-          var email = "komm@barleben-komm.de"
-          var phone = document.getElementById('phone').value;
-          var message = document.getElementById('message').value;
+               var name = document.getElementById('name').value;
+               var email = "komm@barleben-komm.de"
+               var phone = document.getElementById('phone').value;
+               var message = document.getElementById('message').value;
 
-          var subject = 'Neue Nachricht von ' + name;
-          var emailBody = 'Hallo Herr Barleben und Frau Komm, ' + message + 'Schöne Grüße, ' + name;
-          document.location = "mailto:"+email+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(emailBody);
+               // Wenn die Werte leer sind, verwenden Sie einen Platzhalter
+               name = name ? name : ' [Ihr Name] ';
+               phone = phone ? phone : ' [Ihre Telefonnummer] ';
+               message = message ? message : ' [Ihr Anliegen] ';
+
+               var subject = 'Neue Nachricht von ' + name;
+               var emailBody = 'Sehr geehrte Strafrechtkanzlei Barleben & Komm, \n\n' + message + ' \n\nMein Kontakt wäre: ' + phone + '\n\nSchöne Grüße, \n' + name;
+               document.location = "mailto:"+email+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(emailBody);
           }
      </script>
-
 
      <!-- GOOGLE MAP -->
      <section id="google-map" style="margin-top: 50px;">

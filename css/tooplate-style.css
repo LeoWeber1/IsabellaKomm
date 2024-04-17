@@ -278,7 +278,7 @@
   header span {
     font-weight: 500;
     display: inline-block;
-    padding: 11px 15px;
+    padding: 11px ;
   }
 
   header span.date-icon {
@@ -286,6 +286,10 @@
     border-right: 1px solid #f2f2f2;
     padding-right: 19px;
     padding-left: 19px;
+  }
+
+  header span.emergency-icon {
+    border-left: 1px solid #f2f2f2;
   }
 
   header span i {
@@ -964,8 +968,8 @@
     }
 
     .navbar-default .navbar-nav li a {
-      padding-right: 15px;
-      padding-left: 15px;
+      padding-right: 10px;
+      padding-left: 10px;
     }
   }
 
@@ -979,6 +983,7 @@
     }
     header .text-align-right {
       text-align: left;
+      padding-left: 10px;
     }
     header span {
       padding-top: 0;
